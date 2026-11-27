@@ -6,7 +6,7 @@ authors:
 lastUpdated: 2026-09-29
 ---
 
-Escribir código implica mucho más que limitarse a escribirlo. Hemos podido validar manualmente que funciona y hemos utilizado archivos de instrucciones para garantizar que sigue nuestros estándares. Pero ¿qué ocurre con las pruebas, lint y el resto de las tareas de integración continua (CI)?
+El desarrollo de software no consiste únicamente en escribir código. Hemos podido validar manualmente que funciona y hemos utilizado archivos de instrucciones para garantizar que sigue nuestros estándares. Pero ¿qué ocurre con las pruebas, lint y el resto de las tareas de integración continua (CI)?
 
 Para este tipo de tareas, las **habilidades de agente** son la mejor opción. Las habilidades ayudan a Copilot a comprender cómo ejecutar correctamente operaciones como estas.
 
@@ -44,7 +44,7 @@ Las habilidades se pueden invocar directamente mediante un comando con barra dia
 2. Utiliza la indicación siguiente para invocar la habilidad:
 
     ```plaintext
-    Run the quality-checks skill for unit tests, lint, and type checks.
+    Ejecuta la habilidad quality-checks para ejecutar las pruebas unitarias, el linter y las comprobaciones de tipos.
     ```
 
 3. Observa el informe final.
@@ -60,7 +60,7 @@ Queremos un informe mejor que indique qué se ha ejecutado, si ha tenido éxito 
     ```markdown
     ## Results output formatting
 
-    Upon completion, report each command that ran and whether it passed, failed, or was blocked. Include test counts, durations, errors, warnings, and other metrics only when the tool reports them. Identify the next action for any failure or blocker, and never describe a skipped or incomplete check as passed.
+    Al terminar, indica cada comando ejecutado y si se ha superado, ha fallado o ha quedado bloqueado. Incluye el número de pruebas, la duración, los errores, las advertencias y otras métricas solo cuando la herramienta los comunique. Indica el siguiente paso ante cada fallo o bloqueo y nunca presentes como superada una comprobación omitida o incompleta.
     ```
 
 El archivo se guardará automáticamente.
@@ -73,7 +73,7 @@ Una vez realizado el cambio, veamos cómo funciona. Utilizaremos exactamente la 
 2. Utiliza la indicación siguiente para invocar la habilidad:
 
     ```plaintext
-    Run the quality-checks skill for unit tests, lint, and type checks.
+    Ejecuta la habilidad quality-checks para ejecutar las pruebas unitarias, el linter y las comprobaciones de tipos.
     ```
 
 3. Observa el informe final.

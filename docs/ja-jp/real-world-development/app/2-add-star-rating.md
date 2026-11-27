@@ -3,10 +3,10 @@ title: "レッスン 2 - 星評価の追加で小さな成果を得る"
 description: "GitHub Copilot app で最初のエージェントセッションを開始し、ゲームカードに小さな変更を加えて、最初の pull request としてマージします。"
 authors:
   - geektrainer
-lastUpdated: 2026-07-09
+lastUpdated: 2026-10-22
 ---
 
-前のレッスンでは、ワークスペースを確認し、クイックチャットを使いました。ここでは、**エージェントセッション**を開始し、プロジェクトに最初の変更を加えます。変更は小規模なものにします。ゲームのデータにはすでに星評価が含まれていますが、ホームページのゲームカードにはまだ表示されていません。エージェントに表示を依頼し、変更をレビューして、最初の pull request としてマージします。
+ワークスペースを確認し、クイックチャットを試しました。次は**エージェントセッション**を開始して、プロジェクトに最初の変更を加えます。変更は小規模です。ゲームのデータにはすでに星評価が含まれていますが、ホームページのゲームカードにはまだ表示されていません。エージェントに表示を依頼し、変更をレビューして、最初の pull request としてマージします。
 
 このレッスンでは、次の内容を学習します。
 
@@ -28,12 +28,12 @@ Tailspin Toys の各ゲームには星評価を設定でき、ゲーム詳細ペ
 
 ## セッションを開始して変更を依頼する
 
-新しいセッションを開始し、プロジェクトの調査と機能の実装に取りかかります。[前のレッスン][prior-lesson]では、GitHub リポジトリからプロジェクトを追加しました。そのリポジトリ用の新しいセッションを作成し、変更を依頼します。
+新しいセッションを開始し、プロジェクトの調査と機能の実装に取りかかります。[アプリのセットアップ][prior-lesson]では、GitHub リポジトリからプロジェクトを追加しました。そのリポジトリ用の新しいセッションを作成し、変更を依頼します。
 
-1. GitHub Copilot app に戻ります。アプリを閉じている場合は開きます。
-2. **Projects** の横にある **+** を選択します。
+1. GitHub Copilot app に戻るか、アプリを開きます。
+2. サイドバーの上部にある **+** を選択してセッションを開始します。
 3. リポジトリとして `tailspin-toys` を選択します。
-4. プロンプトボックスの下で **new working tree** と **Interactive** モードを選択します。次のプロンプトを使って変更を依頼します。
+4. **new working tree** と、プロンプトボックスの下にある **Interactive** モードを選択します。次のプロンプトを使って変更を依頼します。
 
     ```plaintext
     Show each game's starRating out of 5 in the game cards on the list page. If the rating is null, show "No rating yet". Keep the card layout as it is, add tests, and run the relevant checks.
@@ -47,7 +47,7 @@ Copilot app は、最初にプロジェクトの分離されたコピーであ�
 
 AI が生成したすべての変更は、どれほど小さくてもマージ前にレビューする必要があります。Copilot app 内で変更を確認します。
 
-1. アプリの右上隅にある **Toggle review panel** を選択します。Copilot が行った未処理の変更がすべて表示される差分画面が開きます。
+1. アプリの右上隅にある **Toggle review panel** を選択します。開いたパネルで **Changes** を選択し、変更されたファイルと差分を確認します。
 
     ![Create PR の右側にある Toggle review panel ボタンを矢印で示した GitHub Copilot app の上部ツールバー](../../../_images/app-2-review-panel.png)
 
@@ -77,7 +77,7 @@ AI が生成したすべての変更は、どれほど小さくてもマージ�
 > [!TIP]
 > キャンバスは、Copilot app 内で利用できるインタラクティブなウィジェットです。後のレッスンではカスタムキャンバスを調べ、自分でも作成しますが、ここでは組み込みのブラウザーキャンバスを使用します。
 
-1. 次のプロンプトを使い、アプリを起動してブラウザーキャンバスでページを開くよう Copilot に依頼します。
+1. 次のプロンプトを使い、アプリを起動してブラウザーキャンバスで開くよう Copilot に依頼します。
 
     ```plaintext
     Start the app and open it in the browser canvas.
@@ -97,10 +97,11 @@ AI が生成したすべての変更は、どれほど小さくてもマージ�
 
 1. 右上隅にある **Create PR** を選択します。
 2. 求められた場合は **Sign in with your browser** を選択し、画面の指示に従って認証します。
-3. Copilot が PR の作成を開始します。
-4. チャットのすぐ上にある **PR** バブルを選択し、レビューペインで PR を開いて pull request を確認します。必要に応じて、ここで PR をレビューできます。
-5. 準備ができたら **Ready to merge** を選択します。
-6. 新しいダイアログウィンドウで **Merge pull request** を選択し、pull request をマージします。
+3. リポジトリのポリシーにより PR 作成前に関連する Issue が必要だと Copilot が説明した場合は、その手順に従うよう確認します。
+4. Copilot が PR を作成します。
+5. チャットのすぐ上にある **PR** バブルを選択し、レビューペインで PR を開きます。必要に応じてここでレビューします。
+6. 準備ができたら **Ready to merge** を選択します。
+7. 表示されたダイアログで **Merge pull request** を選択し、PR をマージします。
 
 ## まとめと次のステップ
 
@@ -110,7 +111,7 @@ AI が生成したすべての変更は、どれほど小さくてもマージ�
 - ゲームカードに小規模で対象を絞った変更を加えるようエージェントに指示した。
 - ワークスペースの差分ビューで変更をレビューした。
 - アプリをローカルで実行し、ブラウザーで星評価を確認した。
-- PR 1 を作成し、チェックをレビューして、明示的にマージした。
+- PR 1 を作成してチェックをレビューし、明示的にマージした。
 
 次は、[フィルター機能の Issue から開始し、Plan モードと Autopilot モードを使用して][next-lesson]、より大規模な機能を構築します。
 
@@ -120,7 +121,7 @@ AI が生成したすべての変更は、どれほど小さくてもマージ�
 - [GitHub Copilot app について][about-copilot-app]
 - [GitHub Copilot app での Issue と pull request の管理][managing-issues-prs]
 
-[prior-lesson]: ../1-install-copilot-app/#github-copilot-app-をインストールして構成する
+[prior-lesson]: ../1-install-copilot-app/
 [next-lesson]: ../3-agent-modes/
 [agent-sessions]: https://docs.github.com/copilot/how-tos/github-copilot-app/agent-sessions
 [about-copilot-app]: https://docs.github.com/copilot/concepts/agents/github-copilot-app

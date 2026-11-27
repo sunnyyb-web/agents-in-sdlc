@@ -26,7 +26,7 @@ Space Quiz는 이미 GitHub 리포지토리에 있지만, 누구나 간단히 �
 `space-quiz`의 Copilot app 세션에서 다음 프롬프트를 보냅니다.
 
 ```plaintext
-이 리포지토리의 GitHub Pages 배포를 준비해 주세요. 변경 사항이 기본 브랜치에 반영된 후 필요한 경우 웹사이트를 빌드하고 GitHub Pages에 배포하는 GitHub Actions 워크플로를 만들어 주세요. 아직 README가 없다면 앱 소개와 로컬 실행 방법을 설명하는 README를 추가해 주세요. 변경 사항으로 풀 리퀘스트를 만들고 링크와 필요한 Pages 설정 또는 권한을 알려 주세요. 병합하거나 자동 병합을 활성화하거나 Pages 설정을 변경하거나 배포하지 마세요. 작업을 멈추고 제 검토를 기다려 주세요.
+Prepare a GitHub Pages deployment for this repository. Create a GitHub Actions workflow that builds the website if needed and deploys it to GitHub Pages after changes reach the default branch. Add a README describing the app and how to run it locally if one does not already exist. Create a pull request with these changes and report its link and any required Pages settings or permissions. Do not merge, enable auto-merge, change Pages settings, or deploy. Stop and wait for my review.
 ```
 
 ## 워크플로와 풀 리퀘스트 검토하기
@@ -44,7 +44,7 @@ Space Quiz는 이미 GitHub 리포지토리에 있지만, 누구나 간단히 �
 `<PR_NUMBER>`를 검토한 풀 리퀘스트 번호로 바꾼 다음 별도의 프롬프트로 보냅니다.
 
 ```plaintext
-이 리포지토리의 풀 리퀘스트 <PR_NUMBER>를 검토했으며 병합과 배포를 승인합니다. GitHub Actions를 사용하도록 GitHub Pages를 활성화하고, 필수 검사가 통과한 뒤에만 해당 풀 리퀘스트를 병합한 다음 배포가 성공할 때까지 모니터링해 주세요. 실제 웹사이트의 최종 URL을 알려 주세요. Pages를 활성화하거나 병합할 권한이 없다면 제가 무엇을 승인하거나 해야 하는지 정확히 알려 주세요. 사이트가 실제로 게시되기 전까지 성공했다고 보고하지 마세요.
+I have reviewed pull request <PR_NUMBER> in this repository and authorize its merge and deployment. Enable GitHub Pages using GitHub Actions, merge that pull request only after required checks pass, and monitor the deployment until it succeeds. Report the final URL of the live website. If you lack permission to enable Pages or merge, tell me exactly what I need to approve or do; do not report success until the site is live.
 ```
 
 ![Space Quiz 풀 리퀘스트 병합, Build website·Upload artifact·Deploy to Pages 단계가 성공한 GitHub Actions 배포 실행, yourname.github.io/space-quiz/에서 열린 Space Quiz를 보여 주는 3단계 다이어그램](../../../_images/first-steps-app-pages-deploy.svg)

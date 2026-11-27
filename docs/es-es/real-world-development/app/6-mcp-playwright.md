@@ -6,7 +6,7 @@ authors:
 lastUpdated: 2026-07-09
 ---
 
-Como ya hemos destacado, escribir código implica mucho más que limitarse a escribirlo. Necesitamos trabajar con datos y servicios externos e incluso permitir que Copilot disponga de automatizaciones adicionales. Aquí es donde entran en juego los servidores MCP. Estos permiten a Copilot ir más allá de lo que incorpora la aplicación y le proporcionan aún más herramientas y servicios.
+El desarrollo con IA va más allá de escribir código. También necesitamos trabajar con datos y servicios externos y permitir que Copilot disponga de automatizaciones adicionales. Aquí es donde entran en juego los servidores MCP: permiten a Copilot ir más allá de lo que incorpora la aplicación y le proporcionan más herramientas y servicios.
 
 En esta lección:
 
@@ -39,8 +39,8 @@ Hay muchos otros servidores MCP que proporcionan acceso a distintas herramientas
 Los servidores MCP se gestionan desde **Customize** en la barra lateral. Los servidores configurados para tus repositorios o Copilot CLI pueden estar ya disponibles en la aplicación, así que compruébalo antes de añadir un duplicado. La [documentación de personalización de la aplicación][customize-app] explica las opciones disponibles.
 
 1. Selecciona **Customize** en la barra lateral.
-2. Selecciona **MCP** y comprueba en **Installed** si ya existe un servidor de Playwright.
-3. Si es necesario, busca **Playwright** entre los servidores disponibles o utiliza el procedimiento de servidor personalizado documentado por el editor.
+2. Abre el menú desplegable **All types** y selecciona **MCP**; después, comprueba en **Installed** si ya existe un servidor de Playwright.
+3. Si Playwright aún no está instalado, búscalo entre los servidores disponibles y selecciona **Add server**.
 4. Revisa el editor, la configuración y cualquier solicitud de instalación antes de aprobarla. Sigue las indicaciones para añadir el servidor; las directivas de la organización o la falta de requisitos previos pueden bloquear la configuración.
 5. Vuelve a la sesión de filtrado en modo **Interactive** y confirma que las herramientas MCP de Playwright están disponibles.
 
@@ -53,7 +53,7 @@ La incidencia y tus decisiones de planificación ya están en el contexto. Deté
 1. Utiliza la indicación siguiente para pedir a Copilot que valide la nueva funcionalidad:
 
     ```plaintext
-    Start the app and use Playwright MCP to check filtering against the issue and our plan. Tell me what works and what doesn't, without making changes. Stop the server you started when you're done.
+    Inicia la aplicación y utiliza Playwright MCP para comprobar el filtrado según la incidencia y nuestro plan. Dime qué funciona y qué no, sin realizar cambios. Cuando termines, detén el servidor que has iniciado.
     ```
 
   > [!NOTE]

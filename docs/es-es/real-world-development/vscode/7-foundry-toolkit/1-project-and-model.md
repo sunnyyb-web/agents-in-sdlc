@@ -42,7 +42,7 @@ El kit de herramientas integra en VS Code la exploración de modelos, la impleme
 5. Abre un nuevo chat de Copilot en modo **Agent** y pide:
 
    ```text
-   Show me the open issue about a Backer Concierge assistant and summarize its acceptance criteria.
+   Muéstrame la incidencia abierta sobre el asistente Backer Concierge y resume sus criterios de aceptación.
    ```
 
 6. Confirma que Copilot muestra **Add a Backer Concierge assistant for catalog questions**. Los criterios de aceptación exigen respuestas fundamentadas en los datos, ausencia de cifras de financiación inventadas, una pregunta aclaratoria y una interfaz accesible con cobertura de pruebas de extremo a extremo.
@@ -81,13 +81,13 @@ Aquí importan más el cumplimiento de las reglas y la fundamentación en los da
 1. En Copilot Chat, selecciona **+**, después **GitHub Issues**, y adjunta **Add a Backer Concierge assistant for catalog questions**. Envía:
 
    ```text
-   /microsoft-foundry recommend a model for the agent described in this issue. There's no math or multi-step planning here, so reasoning depth isn't a priority. Prioritize speed instead. Recommend 2-3 candidates available in my Azure region with the trade-offs between them, tell me which you'd pick and why, and check my quota. Avoid deprecated & older models according to the model retirement schedule
+   /microsoft-foundry recomienda un modelo para el agente descrito en esta incidencia. No hay cálculos ni planificación en varios pasos, así que la profundidad de razonamiento no es prioritaria. Da prioridad a la velocidad. Recomienda entre 2 y 3 candidatos disponibles en mi región de Azure, explica sus ventajas e inconvenientes, dime cuál elegirías y por qué, y comprueba mi cuota. Evita los modelos obsoletos y antiguos según el calendario de retirada de modelos.
    ```
 
 2. Lee las recomendaciones y elige el modelo que mejor se ajuste a los requisitos y a la cuota disponible. Pide a Copilot que lo implemente:
 
    ```text
-   /microsoft-foundry Deploy the model I selected to the tailspin-toys project and use the model name as the deployment name. Confirm the available quota and capacity with me before creating it.
+   /microsoft-foundry Implementa el modelo que he seleccionado en el proyecto tailspin-toys y utiliza el nombre del modelo como nombre de la implementación. Confirma conmigo la cuota y la capacidad disponibles antes de crearla.
    ```
 
 3. Confirma el proyecto, la implementación, la capacidad y el coste antes de aprobar. Si procede tras revisar el alcance, selecciona **Allow az …** para esta sesión para reducir las solicitudes repetidas.
@@ -102,7 +102,7 @@ Model Playground no dispone del archivo del catálogo. Un subconjunto reducido d
 1. En **Models**, selecciona el nombre del modelo implementado para abrir **Model Playground** con ese modelo ya seleccionado. Pega el siguiente prompt del sistema:
 
    ```text
-   You're the Backer Concierge for Tailspin Toys. Only recommend games from this catalog — never invent games, publishers, ratings, or any funding/price/date info. If a request is vague, ask one short question first.
+   Eres Backer Concierge de Tailspin Toys. Recomienda únicamente juegos de este catálogo; nunca inventes juegos, editoriales, valoraciones ni información sobre financiación, precios o fechas. Si una petición es imprecisa, haz primero una pregunta breve.
 
    CATALOG
 
@@ -119,12 +119,12 @@ Model Playground no dispone del archivo del catálogo. Un subconjunto reducido d
    | Code Quest Odyssey | Adventure | CodeForge Studios | 4.8 |
    ```
 
-2. Prueba la fundamentación con `I love puzzle games about tracking down bugs. What should I back?` Debes obtener títulos reales de la lista con información correcta.
-3. Prueba los datos ausentes con `How much has Pipeline Conquest raised so far, and how many backers does it have?` Debes obtener una negativa clara porque el catálogo no registra la financiación ni los patrocinadores, seguida de la información que sí conoce.
-4. Prueba otro límite con `I need something for four players, about an hour long.` Debes obtener una explicación de que no se dispone del número de jugadores ni de la duración de las partidas, seguida de una pregunta de seguimiento útil.
-5. Prueba la presión para salir del catálogo con `Do you have Wingspan? If not, what's the closest thing you've got?` No debe afirmar que Wingspan está en el catálogo ni describirlo a partir de conocimientos externos, y debe reconducir la conversación hacia títulos reales de Tailspin.
-6. Prueba las peticiones vagas con `Recommend me something good.` Debes obtener una pregunta aclaratoria breve y ninguna recomendación hasta conocer la categoría o la temática.
-7. Prueba la clasificación con `What are your three highest rated games?` Debes obtener Deployment Dynasty y Script Strike con 5.0, seguidos de Code Quest Odyssey con 4.8, en el orden correcto y con las cifras correctas.
+2. Prueba la fundamentación con `Me encantan los juegos de rompecabezas sobre la búsqueda de errores. ¿Qué debería apoyar?`. Debes obtener títulos reales de la lista con información correcta.
+3. Prueba los datos ausentes con `¿Cuánto dinero ha recaudado Pipeline Conquest y cuántos patrocinadores tiene?`. Debes obtener una negativa clara porque el catálogo no registra la financiación ni los patrocinadores, seguida de la información que sí conoce.
+4. Prueba otro límite con `Busco algo para cuatro jugadores y que dure aproximadamente una hora.`. Debes obtener una explicación de que no se dispone del número de jugadores ni de la duración de las partidas, seguida de una pregunta de seguimiento útil.
+5. Prueba la presión para salir del catálogo con `¿Tienes Wingspan? Si no, ¿cuál es el juego más parecido que tienes?`. No debe afirmar que Wingspan está en el catálogo ni describirlo a partir de conocimientos externos, y debe reconducir la conversación hacia títulos reales de Tailspin.
+6. Prueba las peticiones imprecisas con `Recomiéndame algo bueno.`. Debes obtener una pregunta aclaratoria breve y ninguna recomendación hasta conocer la categoría o la temática.
+7. Prueba la clasificación con `¿Cuáles son tus tres juegos mejor valorados?`. Debes obtener Deployment Dynasty y Script Strike con 5.0, seguidos de Code Quest Odyssey con 4.8, en el orden correcto y con las cifras correctas.
 8. Si alguna comprobación falla, comenta con Copilot la respuesta incorrecta y la regla, ajusta la configuración o la elección del modelo y repite las comprobaciones antes de continuar.
 
 ## Punto de control al finalizar

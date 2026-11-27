@@ -25,7 +25,7 @@ Copilot cloud agent에 할당된 작업의 현재 상태를 확인합니다.
 1. [Copilot agents 페이지](https://github.com/copilot/agents)로 이동합니다.
 2. 기본 창과 왼쪽 창에 표시되는 작업 목록을 살펴봅니다. 다음과 같이 Copilot에 할당한 작업이 표시됩니다.
    - 코드베이스 문서 업데이트
-   - 게임 상세 페이지에 관련 게임 표시
+   - 게임을 수정하는 API 생성
    - 웹사이트에 고대비 모드 추가
 3. 실행 중인 작업 하나를 선택하고 Copilot이 수행한 작업을 검토합니다. 다음 작업을 수행할 수 있습니다.
    - 리포지토리에서 코드 확인
@@ -50,7 +50,7 @@ Copilot cloud agent에 할당된 작업의 현재 상태를 확인합니다.
 3. **Steer active session while Copilot is working** 대화 상자에 다음 프롬프트를 입력합니다.
 
     ```plaintext
-    고대비 모드를 만드는 김에 밝은 모드도 추가해 주세요. 사용자가 원하는 표시 모드를 선택할 수 있도록 밝은 모드 토글도 제공해야 합니다.
+    While we are working on a high contrast mode, let's also add a light mode. There should be a switch for this mode as well where users can select their desired display mode.
     ```
 
     ![agents 페이지의 cloud agent 작업에서 활성 세션 안내 대화 상자를 강조한 스크린샷](../../../_images/ex6-steer-cloud-agent-task.png)

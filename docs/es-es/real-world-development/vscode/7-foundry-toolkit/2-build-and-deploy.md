@@ -57,7 +57,7 @@ El kit de herramientas genera la estructura de código en el repositorio actual 
 2. En el nuevo chat, confirma que se cambia a **AIAgentExpert**. Sustituye el prompt generado por el prompt personalizado y envíalo:
 
    ```text
-   /foundrytk-quick-start Create a backer concierge AI agent called 'Backer Concierge'. The agent should use the model I deployed to answer catalog questions and recommend games grounded strictly in db/catalog.json. Review the acceptance criteria in the issue titled 'Add a Backer Concierge assistant for catalog questions' and ensure the agent meets them. Generate the code into agent/backer-concierge in the current workspace and ask me if anything is unclear.
+   /foundrytk-quick-start Crea un agente de IA de asistencia a patrocinadores llamado «Backer Concierge». Debe utilizar el modelo que he implementado para responder preguntas sobre el catálogo y recomendar juegos basándose exclusivamente en db/catalog.json. Revisa los criterios de aceptación de la incidencia titulada «Add a Backer Concierge assistant for catalog questions» y asegúrate de que el agente los cumpla. Genera el código en agent/backer-concierge dentro del área de trabajo actual y pregúntame si algo no está claro.
    ```
 
 3. Revisa el código generado en `agent/backer-concierge`. Confirma que el catálogo está incluido en el agente que se puede implementar, que las pruebas específicas pasan y que no se incluirán credenciales ni archivos de entorno locales en los commits.
@@ -74,7 +74,7 @@ La transferencia **Go production** empaqueta el agente existente para Foundry. N
 1. En el chat de Copilot de creación del agente, selecciona **Go production**, sustituye el prompt predeterminado por el siguiente y envíalo:
 
    ```text
-   /foundrytk-quick-start Review this agent for deployment readiness, run its tests, then deploy it to my existing tailspin-toys Foundry project. Show me the deployment status and test the deployed agent.
+   /foundrytk-quick-start Revisa si este agente está listo para implementarse, ejecuta sus pruebas y, después, impleméntalo en mi proyecto tailspin-toys de Foundry. Muéstrame el estado de la implementación y prueba el agente implementado.
    ```
 
    ![Captura de pantalla que muestra las opciones de transferencia del agente AIAgentExpert.](../../../../_images/vscode-go-production-handoff.png)
